@@ -1,7 +1,7 @@
 // Nancy Gomez
 // Mavey Ma
-// Israel --
-// Nicholas --
+// Israel Andrade
+// Nicholas Rosas
 
 #include <iostream>
 #include <fstream>
