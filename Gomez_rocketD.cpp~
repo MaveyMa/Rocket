@@ -32,7 +32,7 @@ int main(){
 	fin >> time >> altitude >> velocity >> acceleration;
 
 	fout << "Times where the acceleration is within\n"
-		 << "65% of -9.8 [-3.4, -16.17]:\n" << endl;
+		 << "65% of -9.8 [-3.4, -16.17]:" << endl;
 	while (fin >> times >> alts >> vels >> accels){
 	
 		if ((accels <= -3.4) && (accels >= -16.17)){
