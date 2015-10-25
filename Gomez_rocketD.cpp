@@ -16,7 +16,7 @@ int main(){
 
 	ifstream fin;
 	ofstream fout;
-	string time, altitude, velocity, acceleration;
+	string sTime, altitude, velocity, acceleration;
 	double times, alts, vels, accels;
 	
 	fout.setf(ios::fixed);
@@ -29,7 +29,7 @@ int main(){
 	
 	
 	// Eat up the headers
-	fin >> time >> altitude >> velocity >> acceleration;
+	fin >> sTime >> altitude >> velocity >> acceleration;
 
 	fout << "Times where the acceleration is within\n"
 		 << "65% of -9.8 [-3.4, -16.17]:\n" << endl;
