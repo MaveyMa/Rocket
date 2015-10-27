@@ -28,17 +28,13 @@ int main(){
     int count = 0;
     
     fin >> timeTitle >> altitudeTitle >> velocityTitle >> accelerationTitle;
-    //fout << left << setw(20) << timeTitle << setw(20) << altitudeTitle << setw(20) << velocityTitle << setw(20) << accelerationTitle;
    
     while(fin >> timeValue1 >> altitudeValue1 >> velocityValue1 >> accelerationValue1)
     {
 
         fin >> timeValue2 >> altitudeValue2 >> velocityValue2 >> accelerationValue2;
         fin >> timeValue3 >> altitudeValue3 >> velocityValue3 >> accelerationValue3;
-        
-        cout  << velocityValue1 << " > " << velocityValue2 << " && " << velocityValue2 << " > "  <<  velocityValue3 << endl;
-        cout << endl;
-        
+
         if((velocityValue1 > velocityValue2 && velocityValue2 > velocityValue3))
         {     
             if(newValue1 < newValue2 && newValue2 < newValue3)
