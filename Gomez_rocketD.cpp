@@ -27,6 +27,16 @@ int main(){
 	fin.open("data.txt");
 	fout.open("decel.txt");
 	
+	if (fin.fail())
+	{
+		cout << "Error, input file failed\n";
+		exit(1);
+	}
+	if (fout.fail())
+	{
+		cout << "Error, output file failed\n";
+		exit(1);
+	}
 	
 	// Eat up the headers
 	fin >> sTime >> altitude >> velocity >> acceleration;
