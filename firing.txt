@@ -1,0 +1,2 @@
+Stage 1's firing point is at 10 seconds
+Stage 2's firing point is at 160 seconds
