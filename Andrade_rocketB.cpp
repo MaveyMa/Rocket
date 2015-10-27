@@ -32,17 +32,11 @@ int main(){
    
     while(fin >> timeValue1 >> altitudeValue1 >> velocityValue1 >> accelerationValue1)
     {
-        /*
-        if((velocityValue3 > velocityValue1) && (counter2 > 0))
-        {
-           count++;
-        }
-*/
+
         fin >> timeValue2 >> altitudeValue2 >> velocityValue2 >> accelerationValue2;
         fin >> timeValue3 >> altitudeValue3 >> velocityValue3 >> accelerationValue3;
         
         cout  << velocityValue1 << " > " << velocityValue2 << " && " << velocityValue2 << " > "  <<  velocityValue3 << endl;
-      //  cout  << velocityValue1 << " > " << velocityValue2 << " && " << velocityValue2 << " > "  <<  velocityValue3 << endl;
         cout << endl;
         
         if((velocityValue1 > velocityValue2 && velocityValue2 > velocityValue3))
@@ -59,7 +53,7 @@ int main(){
         newValue3 = velocityValue3;
         
     }
-    fout << "The Number of stages where the velocity increases to a peak and then begins decreasing is: = " << setw(2) << count;
+    fout << "The Number of stages where the velocity increases to a peak and then begins decreasing is: " << setw(2) << count;
     
     fin.close();
     fout.close();
