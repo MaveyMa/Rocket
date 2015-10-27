@@ -18,7 +18,7 @@ int main()
     double maxAlt = 0, maxTime = 0;
     
     //OPEN SESAME, FILES!
-    fin.open("data.txt");
+    fin.open("sounding_rocket.txt");
     fout.open("apex.txt");
     
     //IN CASE FILE DOESN'T OPEN PROPERLY
