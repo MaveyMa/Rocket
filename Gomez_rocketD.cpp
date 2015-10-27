@@ -22,7 +22,6 @@ int main(){
 	
 	fout.setf(ios::fixed);
 	fout.setf(ios::showpoint);
-	fout.setf(ios::right);
 	fout.precision(2);
 	
 	fin.open("data.txt");
