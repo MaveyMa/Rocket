@@ -1,6 +1,7 @@
-// Israel Andrade, Nancy Gomez, Mavey Ma, Nicholas Rosas
-// Created: Friday, October 23, 2015
-// rocketA.cpp
+// Nancy Gomez
+// Mavey Ma
+// Israel Andrade
+// Nicholas Rosas
 
 #include <iostream>
 #include <fstream>
