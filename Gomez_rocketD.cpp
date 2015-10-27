@@ -17,12 +17,13 @@ int main(){
 	ifstream fin;
 	ofstream fout;
 	string sTime, altitude, velocity, acceleration;
-	double times, alts, vels, accels;
+	double times, alts, vels, accels, firstTime, lastTime;
+	int count = 0;
 	
 	fout.setf(ios::fixed);
 	fout.setf(ios::showpoint);
 	fout.setf(ios::right);
-	fout.precision(4);
+	fout.precision(2);
 	
 	fin.open("data.txt");
 	fout.open("decel.txt");
@@ -36,8 +37,24 @@ int main(){
 	while (fin >> times >> alts >> vels >> accels){
 	
 		if ((accels <= -3.4) && (accels >= -16.17)){
-			fout << setw(10) << times << endl;
+			if (count == 0){
+				firstTime = times;
+			}
+			if (times - (count * 10) == firstTime){
+				lastTime = times;
+				count++;
+			}
+			else{
+				fout << "From " << firstTime << " to " << lastTime << endl;
+				count = 1;
+				firstTime = times;
+			} 
 		}
+	}
+	//if the last number in the file was the "lastTime"
+	//then the "else" wont run, so I have this here for that case
+	if (lastTime - ((count-1) * 10) == firstTime){ 
+		fout << "From " << firstTime << " to " << lastTime << endl; 
 	}
 	
 	fin.close();
