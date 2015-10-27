@@ -18,6 +18,17 @@ int main(){
     
     fin.open("data.txt");
     fout.open("stages.txt");
+    
+    if (fin.fail())
+	{
+		cout << "Error, input file failed\n";
+		exit(1);
+	}
+	if (fout.fail())
+	{
+		cout << "Error, output file failed\n";
+		exit(1);
+	}
 
     string timeTitle, altitudeTitle, velocityTitle, accelerationTitle;
     double timeValue1, altitudeValue1, velocityValue1, accelerationValue1;
